@@ -91,5 +91,19 @@ $(document).ready(function() {
     $("#button_effects6").mouseleave(function(){
         $('#button_effects6').fadeTo(1000, 1);
     });
+    
+    //mehtod chaining example
+    $("#myButton").removeClass("blueBox").addClass("border");
+    $("p").css("color", "blue").slideUp(2000).slideDown(2000);
+    $("a").attr("href", "http://www.example.com");
+    
+    //removes class makeRed, adds class makeBorder on mouseenter
+	$("button").mouseenter(function(){
+		$(this).removeClass("makeRed").addClass("makeBorder");
+	});
+
+	$("button").mouseleave(function(){
+	$("button").removeClass("makeBorder").addClass("makeRed");
+});
 
 }); 
